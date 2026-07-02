@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제목</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: #F2f0f0;
+    font-family: 'Gothic A1', sans-serif;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  /* 태블릿 */
+  @media (max-width: 768px) {
+    body {
+      padding-left: 4vw;
+      padding-right: 4vw;
+    }
+  }
+
+  /* 모바일 */
+  @media (max-width: 480px) {
+    body {
+      padding-left: 2vw;
+      padding-right: 4vw;
+    }
+  }
+
+  .title2 {
+    font-size: 14pt;
+  }
+
+  .body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .new {
+    padding-left: 2vw;
+  }
+
+  .grid3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 50vw;
+  }
+
+  td, th {
+    padding: 4px 2px;
+    border-bottom: 1px solid black;
+  }
+
+  a {
+    color: darkgray;
+    text-decoration: overline dotted;
+  }
+
+  .fire {
+    background-color: #96b1ee;
+  }
+
+  td a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 2px dotted #000000;
+    transition: all 0.2s ease;
+  }
+
+  td a:hover {
+    color: #e7f2ab;
+    border-bottom: 1px solid #d8e022;
+  }
+
+  .tab-btn {
+    font-size: 18pt;
+    font-weight: 100;
+    transform: rotate(-6deg);
+    text-decoration-line: overline;
+    text-decoration-style: dotted;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .floating {
+    animation: float 2s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-40px); }
+    100% { transform: translateY(0px); }
+  }
+</style>
+<style>
+  #link-preview {
+    display: none;
+    position: fixed;
+    width: 280px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    background: white;
+    z-index: 9999;
+    pointer-events: none;
+    font-size: 10pt;
+    line-height: 1.4;
+  }
+  #link-preview img {
+    width: 100%;
+    display: block;
+    margin-bottom: 8px;
+    border-radius: 4px;
+  }
+</style>
+
+
+<body>
+
+<div class="grid3">
+<div> 
+    <p class="title2">bak.seonghee@Elle Korea</p>
+</div>
+<div> 
+<p class="title2">엘르에서 즐겁게 써낸 기사들</p>
+       <a href=""https://www.elle.co.kr/search?keyword=박성희&page=1&sortOption=latest&id=artnews">기사 전체보기</a> 
+</div>
+<div>
+     <ul>
+  <li>데일리 : 매일 아침 트렌드 및 이슈를 파악해 500자 내지 1200자 가량의 기사 작성.</li>
+  <li>쇼핑 기사 : 엘르와 리워드 마케팅 제휴를 맺은 브랜드에서 상품을 골라 기사 작성.</li>
+  <li>외고 편집 : 외고 필자의 글을 윤문해 게시. 맞춤법 및 비문 확인, 문장 수정, 재배치 등.</li>
+  <li>기획 : 쓰고 싶은 주제를 골라 작성. </li>
+</ul>
+  <br>
+</div>
+</div>
+<!-- 헤더 끝 -->
+
+<div id="web">
+<div class="body">
+<div>
+<br>
+  <img src="myeong.png" style="position:fixed; top:24vw; right:10vw; width:21vw; transform: rotate(-11deg); filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.4));">
+  <br>
+  <table>
+  <tr><th>날짜</th><th>기사</th><th>분류</th></tr>
+
+  <tr><td rowspan="2">26.02.20.</td><td class="fire"><a href="https://www.elle.co.kr/article/1897345" target="_blank">한국대중음악상 D-6, 올해의 음악인은?</a></td><td>데일리</td></tr>
+  <tr><td class="fire"><a href="https://www.elle.co.kr/article/1897442" target="_blank">심은경이 '여행과 나날'로 얻은 것</a></td><td>데일리</td></tr>
+
+  <tr><td>26.02.26.</td><td class="fire"><a href="https://www.elle.co.kr/article/1897881" target="_blank">256억원 내려놓고 '음악만세' 외친 민희진</a><td>데일리</td></tr>
+
+  <tr><td rowspan="2">26.03.06.</td><td><a href="https://www.elle.co.kr/article/1898278" target="_blank">"베풀수록 커진다": 2026 여성의 날 슬로건의 의미</a></td><td>데일리</td></tr>
+  <tr><td class="fire"><a href="https://www.elle.co.kr/article/1898287" target="_blank">여성의 날, 저마다의 색으로 전진하는 여성 영화 3</a></td><td>기획</td></tr>
+
+  <tr><td>26.03.16.</td><td><a href="https://www.elle.co.kr/article/1898765" target="_blank">유튜브 채널 건 타블로의 오스카 예측 채점 결과</a></td><td>데일리</td></tr>
+  
+  <tr><td>26.03.18.</td><td class="fire"><a href="https://www.elle.co.kr/article/1898863" target="_blank">미디어 아티스트들이 상상한 '전기 없는 세상'은 어떨까</a></td><td>기획</td></tr>
+
+  
+  <tr><td>26.04.15.</td><td class="fire"><a href="https://www.elle.co.kr/article/1900853" target="_blank">또 당신이야? '왕사남', '군체' 포스터 만든 박시영 작업물 모아보기</a></td><td>기획</td></tr>
+  
+  
+  
+  <tr><td>26.04.16.</td><td class="fire"><a href="https://www.elle.co.kr/article/1900908" target="_blank">청바지가 더 예뻐보이는 컬러가 있습니다</a></td><td>쇼핑(기획)</td></tr>
+  
+  
+  <tr><td>26.05.08.</td><td><a href="https://www.elle.co.kr/article/1902246" target="_blank">황동만이 참고해야 할 구교환 감독의 영화제 트레일러</a></td><td>기획</td></tr>
+  
+  <tr><td>26.06.08.</td><td><a href="https://www.elle.co.kr/article/1904079" target="_blank">최성곤듀들이라면 무조건 봐야 하는 오정세 필모그래피 모음</a></td><td>기획</td></tr>
+
+  <tr><td>26.06.08.</td><td><a href="https://www.elle.co.kr/article/1904170" target="_blank">손흥민도 걱정했다는 2026 월드컵의 변수</a></td><td>데일리</td></tr>
+  
+ </table> 
+</div>
+
+<div class="new">
+<br><br><br>
+  <details>
+  <summary>Newly_learned_things</summary>
+  <p>1. '펜타곤 피자지수'라는 지표가 있다. 미국 국제 정세 개입 또는 국제 분쟁이 임박할 때 미국 국방부 본부 청사인 펜타곤 주변 피자 가게에 주문이 폭주한다는 가설이다. 주문량을 모니터링하는 펜타곤 피자 리포트 계정이 존재하며, 별개 주체가 운영하는 <a href="https://www.pizzint.watch/" target="_blank">웹페이지</a>까지 있다.</p>
+  <p>2. 브랜드 마스마룰즈는 '마이 스타일 마이 룰즈'를 줄인 것이며 2026 대한민국 퍼스트브랜드 대상을 수상했다.</p>
+  <p>3. 러닝 고글로는 OAKLEY라는 브랜드가 유명하다.</p>
+  <p>4. 칼리바우트 초콜릿은 발로나만큼 유명하다.</p>
+</details>
+</div>
+</div>
+
+<style>
+  #link-preview {
+    display: none;
+    position: fixed;
+    width: 400px;
+    height: 300px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    background: white;
+    z-index: 9999;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  #link-preview iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: none;
+  }
+</style>
+<div id="link-preview">
+  <img id="preview-img" src="" style="display:none;">
+  <div id="preview-title"></div>
+</div>
+
+<script>
+  const preview = document.getElementById('link-preview');
+  const previewImg = document.getElementById('preview-img');
+  const previewTitle = document.getElementById('preview-title');
+
+  document.querySelectorAll('td a').forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      const title = link.textContent;
+      const img = link.getAttribute('data-img'); // 링크 태그에 data-img="이미지경로" 추가하면 씀
+
+      previewTitle.textContent = title;
+
+      if (img) {
+        previewImg.src = img;
+        previewImg.style.display = 'block';
+      } else {
+        previewImg.style.display = 'none';
+      }
+
+      preview.style.display = 'block';
+    });
+
+    link.addEventListener('mousemove', (e) => {
+      let x = e.clientX + 20;
+      let y = e.clientY + 20;
+
+      if (x + 280 > window.innerWidth) x = e.clientX - 300;
+      if (y + 200 > window.innerHeight) y = e.clientY - 220;
+
+      preview.style.left = x + 'px';
+      preview.style.top = y + 'px';
+    });
+
+    link.addEventListener('mouseleave', () => {
+      preview.style.display = 'none';
+    });
+  });
+</script>
+
+  </body>
+</html>
+
+<!--a href="https://www.elle.co.kr/article/1897345" target="_blank" data-img="myeong.png" 한국대중음악상 D-6, 올해의 음악인은?/a -->
