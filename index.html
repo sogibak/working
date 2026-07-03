@@ -232,21 +232,15 @@
   const previewTitle = document.getElementById('preview-title');
 
   document.querySelectorAll('td a').forEach(link => {
-    link.addEventListener('mouseenter', () => {
-      const title = link.textContent;
-      const img = link.getAttribute('data-img'); // 링크 태그에 data-img="이미지경로" 추가하면 씀
+ link.addEventListener('mouseenter', () => {
+  const note = link.getAttribute('data-note');
 
-      previewTitle.textContent = title;
+  previewTitle.textContent = note || link.textContent;
+  previewImg.style.display = 'none'; // 이미지는 아예 안 씀
 
-      if (img) {
-        previewImg.src = img;
-        previewImg.style.display = 'block';
-      } else {
-        previewImg.style.display = 'none';
-      }
-
-      preview.style.display = 'block';
-    });
+  preview.style.display = 'block';
+});
+    
 
     link.addEventListener('mousemove', (e) => {
       let x = e.clientX + 20;
