@@ -117,7 +117,7 @@
   }
 
   .tab-btn {
-    font-size: 18pt;
+    font-size: 10pt;
     font-weight: 100;
     transform: rotate(-6deg);
     text-decoration-line: overline;
@@ -182,7 +182,10 @@
   margin-bottom: 20px;
 }
   
-
+.tab-btn.active {
+  transform: rotate(0deg);
+  font-weight: 700;
+}
   
 
   
@@ -191,7 +194,8 @@
   #link-preview {
     display: none;
     position: fixed;
-    width: 280px;
+    max-width: 280px;
+    width: max-content;
     padding: 12px;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
@@ -240,9 +244,9 @@
 
 
 <div class="tabs">
-  <button class="tab-btn" onclick="showTab('web')">기사</button>
-  <button class="tab-btn" onclick="showTab('insta')">인스타그램</button>
-  <button class="tab-btn" onclick="showTab('deco')">엘르데코</button>
+ <button class="tab-btn" onclick="showTab('web', this)">기사</button>
+<button class="tab-btn" onclick="showTab('insta', this)">인스타그램</button>
+<button class="tab-btn" onclick="showTab('deco', this)">엘르데코</button>
 </div>
 
   
@@ -444,12 +448,15 @@
 
 
 
-function showTab(tabId) {
+function showTab(tabId, btn) {
   document.getElementById('web').style.display = 'none';
   document.getElementById('insta').style.display = 'none';
   document.getElementById('deco').style.display = 'none';
 
   document.getElementById(tabId).style.display = 'block';
+
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
 }
 
   
