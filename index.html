@@ -35,6 +35,37 @@
       padding-right: 4vw;
     }
   }
+  /* 모바일에서 레이아웃 재조정 */
+@media (max-width: 768px) {
+  .grid3 {
+    grid-template-columns: 1fr;
+  }
+
+  .body {
+    grid-template-columns: 1fr;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  td, th {
+    font-size: 9pt;
+    padding: 3px 2px;
+  }
+
+  img[src="myeong.png"] {
+    position: static;      /* fixed 해제 */
+    width: 60vw;
+    display: block;
+    margin: 20px auto;
+    transform: none;
+  }
+
+  .new {
+    padding-left: 0;
+  }
+}
 
   .title2 {
     font-size: 14pt;
